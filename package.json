@@ -1,0 +1,33 @@
+{
+  "name": "phaser-plugin-debug-body-colors",
+  "version": "0.1.0",
+  "description": "Colors Arcade Physics bodies by collision state",
+  "main": "dist/DebugBodyColorsPlugin.js",
+  "types": "dist/DebugBodyColorsPlugin.d.ts",
+  "scripts": {
+    "build": "npx babel src/main.es6 -o dist/DebugBodyColorsPlugin.js --source-maps",
+    "start": "npx babel src/main.es6 --watch -o dist/DebugBodyColorsPlugin.js --source-maps",
+    "test": "eslint src/main.es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samme/phaser-plugin-debug-body-colors.git"
+  },
+  "keywords": [
+    "phaser-plugin",
+    "phaser3-plugin"
+  ],
+  "author": "samme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samme/phaser-plugin-debug-body-colors/issues"
+  },
+  "homepage": "https://github.com/samme/phaser-plugin-debug-body-colors#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "phaser": "^3.10.1"
+  }
+}
