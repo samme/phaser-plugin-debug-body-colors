@@ -4,6 +4,7 @@
   "description": "Colors Arcade Physics bodies by collision state",
   "main": "dist/DebugBodyColorsPlugin.js",
   "types": "dist/DebugBodyColorsPlugin.d.ts",
+  "files": ["/dist", "/src"],
   "scripts": {
     "build": "npx babel src/main.es6 -o dist/DebugBodyColorsPlugin.js --source-maps",
     "start": "npx babel src/main.es6 --watch -o dist/DebugBodyColorsPlugin.js --source-maps",
