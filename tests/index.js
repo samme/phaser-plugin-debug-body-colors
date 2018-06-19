@@ -5,31 +5,46 @@ console.assert(Phaser.Plugins.DebugBodyColorsPlugin, 'Phaser.Plugins.DebugBodyCo
 var scene = {
 
   preload: function () {
+    if (this.load.totalComplete) return;
+
     this.load.setPath('assets/');
-    this.load.image('crate');
-    this.load.image('platform');
+    this.load.image('cavern');
+    this.load.image('blue');
+    this.load.spritesheet('face', 'metalface78x92.png', { frameWidth: 78, frameHeight: 92 });
   },
 
   create: function () {
-    var group = this.physics.add.group({
-      key: 'crate',
-      frameQuantity: 12,
-      collideWorldBounds: true,
-      bounceX: 0.5,
-      bounceY: 0.5
+    this.anims.create({ key: 'blink', frames: this.anims.generateFrameNumbers('face'), frameRate: 3, yoyo: true });
+
+    this.add.image(400, 300, 'cavern');
+
+    var staticGroup = this.physics.add.staticGroup({
+      key: 'face',
+      frameQuantity: 4,
+      setXY: { x: 150, y: 300, stepX: 150 }
     });
 
-    Phaser.Actions.SetAlpha(group.getChildren(), 0.5);
+    var group = this.physics.add.group({
+      key: 'blue',
+      frameQuantity: 12,
+      collideWorldBounds: true,
+      bounceX: 0.25,
+      bounceY: 0.25,
+      dragX: 6,
+      dragY: 6,
+      velocityX: 0,
+      velocityY: 60
+    });
+
     Phaser.Actions.RandomRectangle(group.getChildren(), this.physics.world.bounds);
 
-    var platform = this.physics.add.staticImage(400, 300, 'platform').setAlpha(0.5);
-
     this.physics.add.collider(group);
-    this.physics.add.collider(group, platform);
 
-    this.input.on('pointerdown', function () {
-      this.scene.restart();
-    }, this);
+    this.physics.add.collider(group, staticGroup, function (gem, statue) {
+      statue.play('blink', true);
+    });
+
+    this.input.on('pointerdown', this.scene.restart.bind(this.scene));
   }
 
 };
