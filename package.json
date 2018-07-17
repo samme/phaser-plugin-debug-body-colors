@@ -8,13 +8,15 @@
   "scripts": {
     "build": "npx babel src/main.es6 -o dist/DebugBodyColorsPlugin.js --source-maps",
     "start": "npx babel src/main.es6 --watch -o dist/DebugBodyColorsPlugin.js --source-maps",
-    "test": "eslint src/main.es6"
+    "test": "node -c dist/DebugBodyColorsPlugin.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samme/phaser-plugin-debug-body-colors.git"
   },
   "keywords": [
+    "phaser",
+    "phaser3",
     "phaser-plugin",
     "phaser3-plugin"
   ],
