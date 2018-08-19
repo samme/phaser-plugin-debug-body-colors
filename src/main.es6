@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 
+const COLOR_DISABLED = 0x660000;
 const COLOR_BLOCKED = 0xff0000;
 const COLOR_TOUCHING = 0xffff00;
 const COLOR_EMBEDDED = 0x0099ff;
@@ -33,6 +34,8 @@ export default class DebugBodyColorsPlugin extends Phaser.Plugins.ScenePlugin {
 
   getColor (body) {
     switch (false) {
+    case body.enable:
+      return this.disabled;
     case body.blocked.none:
       return this.blocked;
     case body.touching.none:
@@ -49,6 +52,7 @@ export default class DebugBodyColorsPlugin extends Phaser.Plugins.ScenePlugin {
 Object.assign(DebugBodyColorsPlugin.prototype, {
   blocked: COLOR_BLOCKED,
   default: COLOR_DEFAULT,
+  disabled: COLOR_DISABLED,
   embedded: COLOR_EMBEDDED,
   touching: COLOR_TOUCHING
 });

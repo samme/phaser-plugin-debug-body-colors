@@ -73,6 +73,7 @@
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
+  var COLOR_DISABLED = 0x660000;
   var COLOR_BLOCKED = 0xff0000;
   var COLOR_TOUCHING = 0xffff00;
   var COLOR_EMBEDDED = 0x0099ff;
@@ -115,6 +116,8 @@
       key: 'getColor',
       value: function getColor(body) {
         switch (false) {
+          case body.enable:
+            return this.disabled;
           case body.blocked.none:
             return this.blocked;
           case body.touching.none:
@@ -136,6 +139,7 @@
   Object.assign(DebugBodyColorsPlugin.prototype, {
     blocked: COLOR_BLOCKED,
     default: COLOR_DEFAULT,
+    disabled: COLOR_DISABLED,
     embedded: COLOR_EMBEDDED,
     touching: COLOR_TOUCHING
   });
