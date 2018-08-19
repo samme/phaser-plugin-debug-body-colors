@@ -1,9 +1,10 @@
-import * as Phaser from 'phaser';
+import Phaser from 'phaser';
 
-class DebugBodyColorsPlugin extends Phaser.Plugin.ScenePlugin {
+declare class DebugBodyColorsPlugin extends Phaser.Plugin.ScenePlugin {
 
   blocked: number;
   default: number;
+  disabled: number;
   embedded: number;
   touching: number;
 
