@@ -21,7 +21,7 @@ new Phaser.Game({
 Colors
 ------
 
-- [disabled][0] — dark red
+- [disabled][0] — gray
 - [blocked][1], not disabled — red
 - [touching][2], not disabled or blocked — yellow
 - [embedded][3], not disabled, blocked or touching — aqua

@@ -73,7 +73,7 @@
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var COLOR_DISABLED = 0x660000;
+  var COLOR_DISABLED = 0x666666;
   var COLOR_BLOCKED = 0xff0000;
   var COLOR_TOUCHING = 0xffff00;
   var COLOR_EMBEDDED = 0x0099ff;

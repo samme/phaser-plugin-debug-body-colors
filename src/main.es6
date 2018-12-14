@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-const COLOR_DISABLED = 0x660000;
+const COLOR_DISABLED = 0x666666;
 const COLOR_BLOCKED = 0xff0000;
 const COLOR_TOUCHING = 0xffff00;
 const COLOR_EMBEDDED = 0x0099ff;
