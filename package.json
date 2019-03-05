@@ -2,15 +2,16 @@
   "name": "phaser-plugin-debug-body-colors",
   "version": "1.2.1",
   "description": "Colors Arcade Physics bodies by collision state",
-  "main": "dist/DebugBodyColorsPlugin.js",
+  "main": "src/index.js",
   "files": [
     "/dist",
     "/src"
   ],
   "scripts": {
-    "build": "npx babel src/main.es6 -o dist/DebugBodyColorsPlugin.js --source-maps",
-    "start": "npx babel src/main.es6 --watch -o dist/DebugBodyColorsPlugin.js --source-maps",
-    "test": "node -c dist/DebugBodyColorsPlugin.js"
+    "build": "npx babel src/index.js -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
+    "start": "npx babel src/index.js --watch -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
+    "test": "npx eslint src/index.js",
+    "test:dist": "node -c dist/PhaserDebugBodyColorsPlugin.js"
   },
   "repository": {
     "type": "git",
