@@ -8,7 +8,7 @@ new Phaser.Game({
   plugins: {
     scene: [{
       key: 'DebugBodyColorsPlugin',
-      plugin: Phaser.Plugins.DebugBodyColorsPlugin,
+      plugin: PhaserDebugBodyColorsPlugin,
       mapping: 'debugBodyColors'
     }]
   },
