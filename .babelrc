@@ -6,5 +6,6 @@
       }
     }]
   ],
+  "moduleId": "phaser-plugin-debug-body-colors",
   "presets": ["env"]
 }
