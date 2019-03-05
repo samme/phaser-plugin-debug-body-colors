@@ -1,6 +1,6 @@
 console.assert(Phaser, 'Phaser');
 
-console.assert(Phaser.Plugins.DebugBodyColorsPlugin, 'Phaser.Plugins.DebugBodyColorsPlugin');
+console.assert(PhaserDebugBodyColorsPlugin, 'PhaserDebugBodyColorsPlugin');
 
 var scene = {
 
@@ -57,7 +57,7 @@ var config = {
   height: 600,
   scene: scene,
   plugins: {
-    scene: [{ key: 'DebugBodyColorsPlugin', plugin: Phaser.Plugins.DebugBodyColorsPlugin, mapping: 'debugBodyColors' }]
+    scene: [{ key: 'DebugBodyColorsPlugin', plugin: PhaserDebugBodyColorsPlugin, mapping: 'debugBodyColors' }]
   },
   physics: {
     default: 'arcade',
