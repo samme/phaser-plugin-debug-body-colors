@@ -57,4 +57,6 @@ Object.assign(DebugBodyColorsPlugin.prototype, {
   touching: COLOR_TOUCHING
 });
 
-Phaser.Plugins.DebugBodyColorsPlugin = DebugBodyColorsPlugin;
+if (typeof window !== 'undefined') {
+  window.PhaserDebugBodyColorsPlugin = DebugBodyColorsPlugin;
+}

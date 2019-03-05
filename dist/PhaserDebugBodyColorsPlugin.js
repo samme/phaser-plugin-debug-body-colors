@@ -1,6 +1,6 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'phaser'], factory);
+    define('phaser-plugin-debug-body-colors', ['exports', 'phaser'], factory);
   } else if (typeof exports !== "undefined") {
     factory(exports, require('phaser'));
   } else {
@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports, global.Phaser);
-    global.main = mod.exports;
+    global.phaserPluginDebugBodyColors = mod.exports;
   }
 })(this, function (exports, _phaser) {
   'use strict';
@@ -144,7 +144,9 @@
     touching: COLOR_TOUCHING
   });
 
-  _phaser2.default.Plugins.DebugBodyColorsPlugin = DebugBodyColorsPlugin;
+  if (typeof window !== 'undefined') {
+    window.PhaserDebugBodyColorsPlugin = DebugBodyColorsPlugin;
+  }
 });
 
-//# sourceMappingURL=DebugBodyColorsPlugin.js.map
+//# sourceMappingURL=PhaserDebugBodyColorsPlugin.js.map
