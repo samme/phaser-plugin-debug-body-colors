@@ -6,13 +6,15 @@ Phaser 3 Debug Body Colors Plugin
 ```javascript
 new Phaser.Game({
   plugins: {
-    scene: [{
-      key: 'DebugBodyColorsPlugin',
-      plugin: PhaserDebugBodyColorsPlugin,
-      mapping: 'debugBodyColors'
-    }]
+    scene: [
+      {
+        key: 'DebugBodyColorsPlugin',
+        plugin: PhaserDebugBodyColorsPlugin,
+        mapping: 'debugBodyColors'
+      }
+    ]
   },
-  physics {
+  physics: {
     arcade: { debug: true }
   }
 });
