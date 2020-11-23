@@ -9,7 +9,10 @@
     "/src"
   ],
   "scripts": {
+    "prebuild": "npm run test",
     "build": "npx babel src/index.js -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
+    "postbuild": "npm run test:dist",
+    "preversion": "npm run build && git add dist",
     "start": "npx babel src/index.js --watch -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
     "test": "npx eslint src/index.js",
     "test:dist": "node -c dist/PhaserDebugBodyColorsPlugin.js"
