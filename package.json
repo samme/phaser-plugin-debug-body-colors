@@ -2,7 +2,8 @@
   "name": "phaser-plugin-debug-body-colors",
   "version": "2.0.2",
   "description": "Colors Arcade Physics bodies by collision state",
-  "main": "src/index.js",
+  "browser": "dist/PhaserDebugBodyColorsPlugin.js",
+  "module": "src/index.js",
   "files": [
     "/dist",
     "/src"
@@ -32,7 +33,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "phaser": "^3.19.0"
+    "phaser": "latest"
   },
   "peerDependencies": {
     "phaser": "^3.10.1"
