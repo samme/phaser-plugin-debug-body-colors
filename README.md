@@ -7,17 +7,19 @@ Phaser 3 Debug Body Colors Plugin
 new Phaser.Game({
   plugins: {
     scene: [
-      {
-        key: 'DebugBodyColorsPlugin',
-        plugin: PhaserDebugBodyColorsPlugin,
-        mapping: 'debugBodyColors'
-      }
+      { key: 'DebugBodyColorsPlugin', plugin: PhaserDebugBodyColorsPlugin, mapping: 'debugBodyColors' }
     ]
   },
   physics: {
     arcade: { debug: true }
   }
 });
+```
+
+Or quick load:
+
+```javascript
+this.load.scenePlugin('PhaserDebugBodyColorsPlugin', 'https://cdn.jsdelivr.net/npm/phaser-plugin-debug-body-colors@3.0.0', 'debugBodyColors', 'debugBodyColors');
 ```
 
 Colors
@@ -28,6 +30,14 @@ Colors
 - [touching][2], not disabled or blocked — yellow
 - [embedded][3], not disabled, blocked or touching — aqua
 - not disabled, blocked, touching, or embedded — violet
+
+Examples
+--------
+
+- [collide](https://codepen.io/samme/pen/aPdGKO)
+- [overlap](https://codepen.io/samme/pen/RdYKqO)
+- [First Phaser 2 game](https://codepen.io/samme/pen/LqGdON)
+- [sprite pool](https://codepen.io/samme/pen/RwWmXrx)
 
 [0]: https://photonstorm.github.io/phaser3-docs/Phaser.Physics.Arcade.Body.html#enable
 [1]: https://photonstorm.github.io/phaser3-docs/Phaser.Physics.Arcade.Body.html#blocked
