@@ -10,10 +10,10 @@
   ],
   "scripts": {
     "prebuild": "npm run test",
-    "build": "npx babel src/index.js -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
+    "build": "echo TODO",
     "postbuild": "npm run test:dist",
     "preversion": "npm run build && git add dist",
-    "start": "npx babel src/index.js --watch -o dist/PhaserDebugBodyColorsPlugin.js --source-maps",
+    "start": "echo TODO",
     "test": "npx eslint src/index.js",
     "test:dist": "node -c dist/PhaserDebugBodyColorsPlugin.js"
   },
@@ -34,8 +34,7 @@
   },
   "homepage": "https://github.com/samme/phaser-plugin-debug-body-colors#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.57.1",
     "phaser": "latest"
   },
   "peerDependencies": {
