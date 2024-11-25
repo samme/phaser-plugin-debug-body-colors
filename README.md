@@ -16,10 +16,12 @@ new Phaser.Game({
 });
 ```
 
-Or quick load:
+or
 
-```javascript
-this.load.scenePlugin('PhaserDebugBodyColorsPlugin', 'https://cdn.jsdelivr.net/npm/phaser-plugin-debug-body-colors@3.0.0', 'debugBodyColors', 'debugBodyColors');
+```js
+function preload () {
+  this.load.scenePlugin('PhaserDebugBodyColorsPlugin', 'https://cdn.jsdelivr.net/npm/phaser-plugin-debug-body-colors@3.0.0');
+}
 ```
 
 Colors
