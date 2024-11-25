@@ -15,7 +15,9 @@ export default class DebugBodyColorsPlugin extends Phaser.Plugins.ScenePlugin {
   }
 
   sceneUpdate () {
-    this.systems.arcadePhysics.world.bodies.iterate(this.updateBody, this);
+    for (const body of this.systems.arcadePhysics.world.bodies) {
+      this.updateBody(body);
+    }
   }
 
   sceneDestroy () {
