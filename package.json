@@ -1,6 +1,6 @@
 {
   "name": "phaser-plugin-debug-body-colors",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Colors Arcade Physics bodies by collision state",
   "type": "module",
   "browser": "dist/phaser-debug-body-colors-plugin.umd.js",
