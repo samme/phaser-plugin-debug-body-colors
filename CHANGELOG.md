@@ -1,3 +1,15 @@
+4.0.0 / 2024-11-26
+------------------
+
+### Changed
+
+- Package uses ES modules.
+- Changed the UMD script to `dist/phaser-debug-body-colors-plugin.umd.js`.
+
+### Removed
+
+- Removed the `src` files from the package. Use the `module` file instead.
+
 3.0.0 / 2020-11-23
 ------------------
 
