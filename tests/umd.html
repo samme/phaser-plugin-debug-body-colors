@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Debug Body Colors</title>
+</head>
+
+<body>
+  <script src="../node_modules/phaser/dist/phaser-arcade-physics.js"></script>
+  <script src="../dist/phaser-debug-body-colors-plugin.umd.js"></script>
+  <script>
+    console.assert(PhaserDebugBodyColorsPlugin, 'PhaserDebugBodyColorsPlugin');
+
+    new Phaser.Game({
+      scene: new Phaser.Scene(),
+      physics: { default: 'arcade', debug: true },
+      plugins: {
+        scene: [
+          {
+            key: 'PhaserDebugBodyColorsPlugin',
+            plugin: PhaserDebugBodyColorsPlugin,
+            mapping: 'debugBodyColors'
+          }
+        ]
+      }
+    })
+  </script>
+</body>
+
+</html>

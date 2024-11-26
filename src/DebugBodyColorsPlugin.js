@@ -12,10 +12,12 @@ export default class DebugBodyColorsPlugin extends Phaser.Plugins.ScenePlugin {
     this.systems.events
       .on('postupdate', this.sceneUpdate, this)
       .once('destroy', this.sceneDestroy, this);
+
+    console.log('events', this.systems.scenePlugin.key, this.systems.events);
   }
 
   sceneUpdate () {
-    for (const body of this.systems.arcadePhysics.world.bodies) {
+    for (const body of this.systems.arcadePhysics.world.bodies.entries) {
       this.updateBody(body);
     }
   }
@@ -58,7 +60,3 @@ Object.assign(DebugBodyColorsPlugin.prototype, {
   embedded: COLOR_EMBEDDED,
   touching: COLOR_TOUCHING
 });
-
-if (typeof window !== 'undefined') {
-  window.PhaserDebugBodyColorsPlugin = DebugBodyColorsPlugin;
-}

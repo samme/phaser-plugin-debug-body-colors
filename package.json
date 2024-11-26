@@ -2,20 +2,17 @@
   "name": "phaser-plugin-debug-body-colors",
   "version": "3.0.0",
   "description": "Colors Arcade Physics bodies by collision state",
-  "browser": "dist/PhaserDebugBodyColorsPlugin.js",
-  "module": "src/index.js",
+  "type": "module",
+  "browser": "dist/phaser-debug-body-colors-plugin.umd.js",
+  "module": "dist/phaser-debug-body-colors-plugin.es.js",
   "files": [
-    "/dist",
-    "/src"
+    "/dist"
   ],
   "scripts": {
-    "prebuild": "npm run test",
-    "build": "echo TODO",
-    "postbuild": "npm run test:dist",
-    "preversion": "npm run build && git add dist",
-    "start": "echo TODO",
-    "test": "npx eslint src/index.js",
-    "test:dist": "node -c dist/PhaserDebugBodyColorsPlugin.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npx eslint src"
   },
   "repository": {
     "type": "git",
@@ -35,7 +32,8 @@
   "homepage": "https://github.com/samme/phaser-plugin-debug-body-colors#readme",
   "devDependencies": {
     "eslint": "^8.57.1",
-    "phaser": "latest"
+    "phaser": "latest",
+    "vite": "^5.4.10"
   },
   "peerDependencies": {
     "phaser": "^3.10.1"
